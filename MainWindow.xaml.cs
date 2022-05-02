@@ -25,9 +25,9 @@ namespace ImageConverter
         public MainWindow()
         {
             InitializeComponent();
-            ImageMultiple.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\1.png"));
-            ImageSingle.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\2.png"));
-            ImageLeave.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\3.png"));
+            ImageMultiple.Source = new BitmapImage(new Uri("pack://application:,,,/Image/1.png"));
+            ImageSingle.Source = new BitmapImage(new Uri("pack://application:,,,/Image/2.png"));
+            ImageLeave.Source = new BitmapImage(new Uri("pack://application:,,,/Image/3.png"));
             ContentPage.Content = new SingleControl();
         }
 
@@ -42,32 +42,32 @@ namespace ImageConverter
 
         private void Border_Multiple_Enter (object sender, MouseEventArgs e)
         {
-            ImageMultiple.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\11.png"));
+            ImageMultiple.Source = new BitmapImage(new Uri("pack://application:,,,/Image/11.png"));
         }
 
         private void Border_Multiple_Leave (object sender, MouseEventArgs e)
         {
-            ImageMultiple.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\1.png"));
+            ImageMultiple.Source = new BitmapImage(new Uri("pack://application:,,,/Image/1.png"));
         }
 
         private void Border_Single_Enter(object sender, MouseEventArgs e)
         {
-            ImageSingle.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\22.png"));
+            ImageSingle.Source = new BitmapImage(new Uri("pack://application:,,,/Image/22.png"));
         }
 
         private void Border_Single_Leave(object sender, MouseEventArgs e)
         {
-            ImageSingle.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\2.png"));
+            ImageSingle.Source = new BitmapImage(new Uri("pack://application:,,,/Image/2.png"));
         }
 
         private void Border_Leave_Enter(object sender, MouseEventArgs e)
         {
-            ImageLeave.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\33.png"));
+            ImageLeave.Source = new BitmapImage(new Uri("pack://application:,,,/Image/33.png"));
         }
 
         private void Border_Leave_Leave(object sender, MouseEventArgs e)
         {
-            ImageLeave.Source = new BitmapImage(new Uri(@$"{Directory.GetCurrentDirectory()}\Image\3.png"));
+            ImageLeave.Source = new BitmapImage(new Uri("pack://application:,,,/Image/3.png"));
         }
 
         private void Border_Leave_Click (object sender, MouseButtonEventArgs e)

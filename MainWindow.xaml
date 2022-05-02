@@ -26,7 +26,6 @@
         <Style x:Key="ScrollBarThumbVertical" TargetType="{x:Type Thumb}">
             <Setter Property="OverridesDefaultStyle" Value="true"/>
             <!--<Setter Property="Margin" Value="3"/>-->
-
             <Setter Property="IsTabStop" Value="false"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -206,7 +205,10 @@
             <StackPanel>
                 <Grid Height="440">
                     <Border CornerRadius="35, 35, 40, 0" Background="#25232d">
-                        <ContentControl Height="440" Width="400" x:Name="ContentPage" />
+                        <Grid>
+                            <Border Width="30" Height="30" Margin="354,16,16,394" />
+                            <ContentControl Height="440" Width="400" x:Name="ContentPage" />
+                        </Grid>
                     </Border>
                 </Grid>
                 <Grid Height="60">
@@ -214,17 +216,17 @@
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Width="180" Height="60">
                             <Grid Height="60" Width="60">
                                 <Border MouseLeftButtonDown="Border_Multiple_Click" Cursor="Hand" MouseEnter="Border_Multiple_Enter" MouseLeave="Border_Multiple_Leave" Height="45" Width="45" Background="#25232d" CornerRadius="30">
-                                    <Image Name="ImageMultiple" Height="35" Width="35" Source="Image\1.png" />
+                                    <Image Name="ImageMultiple" Height="35" Width="35"/>
                                 </Border>
                             </Grid>
                             <Grid Height="60" Width="60">
                                 <Border MouseLeftButtonDown="Border_Single_Click" Cursor="Hand" MouseEnter="Border_Single_Enter" MouseLeave="Border_Single_Leave" Height="45" Width="45" Background="#25232d" CornerRadius="30">
-                                    <Image Name="ImageSingle" Height="35" Width="35" Source="Image\2.png" />
+                                    <Image Name="ImageSingle" Height="35" Width="35"/>
                                 </Border>
                             </Grid>
                             <Grid Height="60" Width="60">
                                 <Border MouseLeftButtonDown="Border_Leave_Click" Cursor="Hand" MouseEnter="Border_Leave_Enter" MouseLeave="Border_Leave_Leave" Height="45" Width="45" Background="#25232d" CornerRadius="30">
-                                    <Image Name="ImageLeave" Height="35" Width="35" Source="Image\3.png" />
+                                    <Image Name="ImageLeave" Height="35" Width="35"/>
                                 </Border>
                             </Grid>
                         </StackPanel>
